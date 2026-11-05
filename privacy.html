@@ -17,21 +17,29 @@
 to it is theirs, so this policy describes what happens to their own data.</p>
 
 <h2>What it can access</h2>
-<p>Gmail and Google Calendar, with read-only access. It can't send, change or delete anything.</p>
+<p>It can read Gmail and Google Calendar. It can also create drafts and send email, but it only sends
+an email after the owner has approved its exact recipients and text. It can't change the calendar, or
+change or delete any mail other than the drafts it made.</p>
 
 <h2>How the data is used</h2>
-<p>To sort email, answer the owner's questions about their mail and calendar, and write them a
-morning brief. It isn't used for advertising, and it isn't sold.</p>
+<p>To sort email, answer the owner's questions about their mail and calendar, write them a morning
+brief, summarize their spending from the transaction emails and statements their banks send, find
+subscriptions they may have forgotten, and write emails the owner asks for. It isn't used for advertising, and it isn't sold.</p>
 
 <h2>Who else handles it</h2>
 <p>The text of emails Badi reads is sent to Anthropic's Claude API to be processed. Promotional, social
-and security emails aren't sent. Replies and briefs reach the owner through Telegram. The data isn't
+and security emails aren't sent, and bank emails and statements are read by plain code, with only shop
+names sent to be categorized. If the owner asks about their spending in chat, the figures for that
+answer are sent too. To write an email, what the owner asked for and any email being answered
+are sent to the same API. Replies, briefs and drafts reach the owner through Telegram. The data isn't
 shared with anyone else.</p>
 
 <h2>What's kept</h2>
 <p>The sign-in token is kept on the owner's private server. So are the sender, subject and a one-line
-summary of each email, for 30 days, and for up to two months longer in encrypted backups. Briefs and
-conversations with Badi stay in its conversation log. The text of an email isn't kept.</p>
+summary of each email, for 30 days, and for up to two months longer in encrypted backups. The date,
+amount, kind and shop or person from bank emails and statements are kept for two years. Briefs and
+conversations with Badi stay in its conversation log. The text of an email it writes is kept for 30
+days, and for up to two months longer in encrypted backups. The text of an email it reads isn't kept.</p>
 
 <h2>Removing access</h2>
 <p>Access can be removed at any time at
